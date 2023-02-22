@@ -5,6 +5,7 @@ spring:
       port: 8500
       discovery:
         enabled: true
+        preferIpAddress: true
   application:
     name: terraform-demo-app
   mvc:

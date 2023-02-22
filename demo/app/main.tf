@@ -27,7 +27,8 @@ resource "docker_container" "todo-app" {
     "spring.datasource.url=jdbc:postgresql://${data.consul_keys.db_host.var.host}:${data.consul_keys.db_port.var.port}/${data.consul_keys.db_name.var.db}",
     "spring.datasource.username=${data.consul_keys.db_user.var.user}",
     "spring.datasource.password=${data.consul_keys.db_password.var.password}",
-    "server.port=${var.app-expose-port}"
+    "server.port=${var.app-expose-port}",
+    "spring.cloud.consul.discovery.preferIpAddress=true",
   ]
 
   ports {
