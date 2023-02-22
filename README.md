@@ -30,3 +30,23 @@ Track your infrastructure (state):
 - terraform init
 - terraform plan
 - terraform apply
+
+## Demo
+We implemented a todo app rest api app, deploy all infrastructures and app with terraform:
+1. use docker runtime provide all services
+2. deploy a consul cluster
+3. deploy a postgresql database
+4. save database connection information into consul kv
+5. app reading config info from consul kv
+
+### Swagger ui of the rest api
+![app.png](docs%2Fimg%2Fapp.png)
+
+### The consul cluster
+![consul_servers.png](docs%2Fimg%2Fconsul_servers.png)
+
+### database configuration
+![db_config_in_consul.png](docs%2Fimg%2Fdb_config_in_consul.png)
+
+### service registry
+![service_registry.png](docs%2Fimg%2Fservice_registry.png)
