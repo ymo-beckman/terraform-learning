@@ -9,8 +9,12 @@ variable "consul-host" {
 }
 
 variable "app-expose-port" {
-  type = number
-  default = 9998
+  type = map
+  default = {
+    "instance-1": 9991,
+    "instance-2": 9992,
+    "instance-3": 9993,
+  }
 }
 
 data "consul_keys" "db_name" {
